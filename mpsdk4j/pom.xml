@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.github.elkan1788</groupId>
+    <artifactId>mpsdk4j</artifactId>
+    <version>2.b.2</version>
+    <packaging>jar</packaging>
+
+    <name>mpsdk4j</name>
+    <description>
+        A simple SDK for WeChat API develop in Java program.
+    </description>
+
+    <url>http://elkan1788.github.io/mpskd4j</url>
+    <issueManagement>
+        <system>Github Issue</system>
+        <url>https://github.com/elkan1788/mpsdk4j/issues</url>
+    </issueManagement>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+ 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jmockit.version>1.20</jmockit.version>
+  <jackson.version>2.6.1</jackson.version>
+   <commons-lang3.version>3.3.2</commons-lang3.version>
+  <commons-codec.version>1.10</commons-codec.version>
+  <commons-io.version>2.4</commons-io.version>
+  <spring.framework.version>4.2.6.RELEASE</spring.framework.version>
+   </properties>
+
+    <dependencies>
+
+  <dependency>
+   <groupId>org.apache.commons</groupId>
+   <artifactId>commons-lang3</artifactId>
+   <version>${commons-lang3.version}</version>
+  </dependency>
+  
+  <dependency>
+   <groupId>org.springframework</groupId>
+   <artifactId>spring-context</artifactId>
+   <version>${spring.framework.version}</version>
+   <exclusions>
+    <!-- Exclude Commons Logging in favor of SLF4j -->
+    <exclusion>
+     <groupId>commons-logging</groupId>
+     <artifactId>commons-logging</artifactId>
+    </exclusion>
+   </exclusions>
+  </dependency>
+  
+  
+  <dependency>
+   <groupId>org.springframework</groupId>
+   <artifactId>spring-context-support</artifactId>
+   <version>${spring.framework.version}</version>
+  </dependency>
+  
+  <dependency>
+   <groupId>org.springframework</groupId>
+   <artifactId>spring-aop</artifactId>
+   <version>${spring.framework.version}</version>
+  </dependency>
+ 
+  <dependency>
+   <groupId>org.springframework</groupId>
+   <artifactId>spring-orm</artifactId>
+   <version>${spring.framework.version}</version>
+  </dependency>
+
+  <dependency>
+   <groupId>org.springframework</groupId>
+   <artifactId>spring-web</artifactId>
+   <version>${spring.framework.version}</version>
+  </dependency>
+  
+  <dependency>
+   <groupId>org.apache.httpcomponents</groupId>
+   <artifactId>httpclient</artifactId>
+   <version>4.5</version>
+  </dependency>
+ 
+  <dependency>
+   <groupId>org.apache.httpcomponents</groupId>
+   <artifactId>httpmime</artifactId>
+   <version>4.5</version>
+  </dependency>
+ 
+  <dependency>
+   <groupId>org.apache.httpcomponents</groupId>
+   <artifactId>httpclient-cache</artifactId>
+   <version>4.5</version>
+  </dependency>
+ 
+  <dependency>
+   <groupId>org.apache.httpcomponents</groupId>
+   <artifactId>httpcore</artifactId>
+   <version>4.4.1</version>
+  </dependency>
+  
+  <dependency>  
+   <groupId>commons-io</groupId>
+   <artifactId>commons-io</artifactId>
+   <version>${commons-io.version}</version>
+  </dependency>
+
+  <dependency>
+   <groupId>commons-codec</groupId>
+   <artifactId>commons-codec</artifactId>
+   <version>${commons-codec.version}</version>
+  </dependency>    
+
+    <dependency>
+   <groupId>com.fasterxml.jackson.core</groupId>
+   <artifactId>jackson-core</artifactId>
+   <version>${jackson.version}</version>
+  </dependency>
+
+  <dependency>
+   <groupId>com.fasterxml.jackson.core</groupId>
+   <artifactId>jackson-databind</artifactId>
+   <version>${jackson.version}</version>
+  </dependency>
+  <dependency>
+   <groupId>com.fasterxml.jackson.core</groupId>
+   <artifactId>jackson-annotations</artifactId>
+   <version>${jackson.version}</version>
+  </dependency>
+  <dependency>
+   <groupId>com.fasterxml.jackson.module</groupId>
+   <artifactId>jackson-module-jaxb-annotations</artifactId>
+   <version>${jackson.version}</version>
+  </dependency>
+  <dependency>
+   <groupId>com.fasterxml.jackson.dataformat</groupId>
+   <artifactId>jackson-dataformat-xml</artifactId>
+   <version>2.6.1</version>
+  </dependency>
+  
+        <!-- Log4j && Slf4j -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.7</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+            <version>1.7.7</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.7</version>
+            <scope>test</scope>
+        </dependency>
+ 
+        <!-- ServletApi -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+            <optional>true</optional>
+        </dependency>
+
+    </dependencies>
+ 
+</project>
